@@ -12,7 +12,7 @@ public class Coche {
    private boolean asientos_Cuero, climatizador;
 
 
-    public Coche() {
+    public Coche() {//CONSTRUCTOR
         ruedas = 4;
         largo = 2000;
         ancho = 300;
@@ -21,7 +21,7 @@ public class Coche {
     }
 
     public String dimedatosgenerales() {//GETTTER
-        return "La plataforma del vehículo tiene" + ruedas + "ruedas" + "Mide" + largo/1000 + "metros con un ancho de " + ancho + "cm y un peso de plataforma de" + peso_plataforma + "Kg";
+        return "La plataforma del vehículo tiene" + ruedas + "ruedas" + "Mide" + largo/1000 + "metros con un ancho de " + ancho + "cm y un peso de plataforma de" + peso_plataforma + "Kg" +"el color es:" + dime_color();
     }
 
 
@@ -65,6 +65,33 @@ public class Coche {
 
 }
 }
+
+    public static class Uso_Vehiculo {
+
+
+        public static void main (String[] args) {
+            Coche miCoche1=new Coche();
+            miCoche1.establece_Color("Rojo");
+            Furgoneta mifurgoneta1= new Furgoneta(7,580);
+            mifurgoneta1.establece_Color("Azul");
+            mifurgoneta1.configura_asientos("si");
+            mifurgoneta1.configura_climatizador("Si");
+            System.out.println(miCoche1.dimedatosgenerales());
+            System.out.println(mifurgoneta1.dimedatosgenerales() + mifurgoneta1.dimeDatosFurgoneta());
+
+            /*
+            Coche micoche = new Coche();
+            micoche.establece_Color(JOptionPane.showInputDialog("introduce color"));
+            System.out.println(micoche.dimedatosgenerales());
+            System.out.println(micoche.dime_color());
+            micoche.configura_asientos(JOptionPane.showInputDialog("Tiene asientos de cuero"));
+            System.out.println(micoche.dime_asientos());
+            micoche.configura_climatizador(JOptionPane.showInputDialog("Tiene climatizador"));
+            System.out.println(micoche.dime_climatizador());*/
+
+
+        }
+    }
 }
 
 
